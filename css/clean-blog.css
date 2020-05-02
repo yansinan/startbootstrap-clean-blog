@@ -38,8 +38,8 @@ a:focus, a:hover {
   color: #0085A1;
 }
 
-blockquote {
-  font-style: italic;
+.blockquote {
+  /* font-style: italic; */
   color: #868e96;
 }
 

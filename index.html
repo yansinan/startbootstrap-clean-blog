@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Clean Blog - Start Bootstrap Theme</title>
+  <title>PlayBack</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,8 +19,9 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
   <!-- Custom styles for this template -->
-  <link href="css/clean-blog.min.css" rel="stylesheet">
+  <link href="css/clean-blog.css" rel="stylesheet">
 
+  <!-- 分页 -->
 </head>
 
 <body>
@@ -36,16 +37,16 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="index.html">回放</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="about.html">前言</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="post.html">Sample Post</a>
+            <a class="nav-link" href="post.html">实施</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="contact.html">后记</a>
           </li>
         </ul>
       </div>
@@ -59,8 +60,10 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>Clean Blog</h1>
-            <span class="subheading">A Blog Theme by Start Bootstrap</span>
+            <h1>回放</h1>
+            <span class="subheading">Zoom rec ：75-80</span>
+            <span class="subheading">TV volume ：16</span>
+
           </div>
         </div>
       </div>
@@ -71,68 +74,125 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
+        <!-- 前言 -->
+        <div id="preface"></div>
+        <!-- 正文 -->
+        <!-- 
         <div class="post-preview">
           <a href="post.html">
             <h2 class="post-title">
-              Man must explore, and this is exploration at its greatest
-            </h2>
-            <h3 class="post-subtitle">
-              Problems look mighty small from 150 miles up
-            </h3>
-          </a>
-          <p class="post-meta">Posted by
-            <a href="#">Start Bootstrap</a>
-            on September 24, 2019</p>
-        </div>
-        <hr>
-        <div class="post-preview">
-          <a href="post.html">
-            <h2 class="post-title">
-              I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
+              4月1日
             </h2>
           </a>
-          <p class="post-meta">Posted by
-            <a href="#">Start Bootstrap</a>
-            on September 18, 2019</p>
+          <p class="post-meta">期望发布时间
+            <a href="#">无</a>
+          </p>
+        </div> 
+        -->
+        <!-- 手风琴折叠：方法一 -->
+        <div class="panel-group" id="accordion">
+          <div id="perDay" class="panel panel-default">
+              <div class="panel-heading">
+                  <!-- 
+                  <h4 class="panel-title">
+                      <a href="#collapseXXXX" data-toggle="collapse" data-parent="#accordion" class="accordionTitle">            
+                        <h2 class="post-title">XXXX</h2>
+                      </a>
+                  </h4>
+                  -->
+                  <div class="panel-title post-preview">
+                    <a href="#collapseXXXX" data-toggle="collapse" data-parent="#accordion" class="accordionTitle">            
+                      <h2 class="post-title">XXXX</h2>
+                    </a>
+                    <p class="post-meta">期望发布时间
+                      <a href="#">无</a>
+                    </p>
+                  </div> 
+              </div>
+              <div id="collapseXXXX" class="panel-collapse collapse accordionContent" > <!-- 折叠菜单的部分collapse:开始时先隐藏 -->
+                <div class="container">
+                  <!-- 时间、分类 -->
+                  <div class="row clearfix">
+                    <div class="col-md-6 column">
+                      <div class="jumbotron">
+                        <h1 time>11:55分</h1>
+                        <h6 class="lead text-muted">期望发布时间</h6>
+                      </div>
+                    </div>
+                    <div class="col-md-6 column">
+                      <div class="jumbotron">
+                        <h1 classify>文艺</h1>
+                        <h6 class="lead text-muted">分类</h6>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 引用内容 -->
+                  <div class="row clearfix">
+                    <div class="col-md-12 column">          
+                      <div class="jumbotron">
+                        <div class="container">            
+                          <h6 class="lead text-muted">原始内容引用</h6>            
+                          <h1 quoteMain>“正常时期等待策展人藏家上门，等待展览，等待‘机会’，特殊时期，没有‘机会’，没有展览，没有人上门，靠接受调查和主动或者被动的捐赠抗疫捐作品获得存在感，太多事情可以做了，不要困在这个无聊的游戏里做最后一个替补。#起床气”</h1>
+                          <h6 class="small text-muted float-right"><em quoteAuthor>@程然 Cheng Ran</em></h6><br>            
+                          <hr class="my-4 float-none">
+            
+                        </div>
+                        <div class="container">
+                          <h1 quoteAttachment>一个链接</h1>
+                          <h6 class="text-muted lead">附加内容引用</small>            
+                        </div>
+            
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 创建内容 -->
+                  <div class="row clearfix">
+                    <div class="col-md-12 column">          
+                      <div class="jumbotron">
+                        <div class="container">
+                          <h6 class="lead text-muted">创建内容</h6>
+                          <h1 createMain>一个赞</h1>
+                          <hr class="my-4">
+                        </div>
+                        <div class="container">
+                          <h1 createAttachment>无</h1>
+                          <h6 class="lead text-muted">附加创建内容</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 声音记录 -->
+                  <div class="row clearfix">
+                    <div class="col-md-12 column">          
+                      <div class="jumbotron">
+                        <div class="container">
+                          <h6 class="text-muted lead">声音记录</h6>
+                          <h1 soundTitle>BTV文艺频道</h1>
+                          <hr class="my-4">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
+        
         <hr>
-        <div class="post-preview">
-          <a href="post.html">
-            <h2 class="post-title">
-              Science has not yet mastered prophecy
-            </h2>
-            <h3 class="post-subtitle">
-              We predict too much for the next year and yet far too little for the next ten.
-            </h3>
-          </a>
-          <p class="post-meta">Posted by
-            <a href="#">Start Bootstrap</a>
-            on August 24, 2019</p>
-        </div>
-        <hr>
-        <div class="post-preview">
-          <a href="post.html">
-            <h2 class="post-title">
-              Failure is not an option
-            </h2>
-            <h3 class="post-subtitle">
-              Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-            </h3>
-          </a>
-          <p class="post-meta">Posted by
-            <a href="#">Start Bootstrap</a>
-            on July 8, 2019</p>
-        </div>
-        <hr>
-        <!-- Pager -->
+        <!-- 后记 -->
+        <div id="end"></div>
+
+        <!-- Pager
         <div class="clearfix">
           <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
         </div>
+         -->
       </div>
     </div>
   </div>
 
   <hr>
+
 
   <!-- Footer -->
   <footer>
@@ -176,7 +236,8 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/clean-blog.min.js"></script>
+  <script src="js/arrData.js"></script>
+  <script src="js/clean-blog.js"></script>
 
 </body>
 
